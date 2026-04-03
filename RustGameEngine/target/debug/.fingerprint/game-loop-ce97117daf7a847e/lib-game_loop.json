@@ -1,0 +1,1 @@
+{"rustc":9783247635632824192,"features":"[]","declared_features":"[\"tao\", \"winit\"]","target":8180885006369708982,"profile":5347358027863023418,"path":2327819733051094231,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/game-loop-ce97117daf7a847e/dep-lib-game_loop","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
