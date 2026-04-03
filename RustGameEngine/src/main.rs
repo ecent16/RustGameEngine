@@ -6,7 +6,7 @@
 */
 
 // Import necessary modules from the winit crate
-use winit::{
+/*use winit::{
     application::ApplicationHandler, 
     event::{WindowEvent}, 
     event_loop::{ActiveEventLoop, ControlFlow, EventLoop}, 
@@ -89,6 +89,9 @@ impl ApplicationHandler for AppState {
         }
     }
 }
+*/
+use winit::event_loop::{EventLoop, ControlFlow};
+use engine_window::AppState;
 
 fn main() {
     env_logger::init(); // Initialize the logger for debugging purposes
