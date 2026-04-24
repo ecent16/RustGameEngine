@@ -6,12 +6,17 @@
 */
 
 // Import necessary modules from the winit crate
+use std::sync::Arc;
 use winit::{
     application::ApplicationHandler, 
-    event::{WindowEvent, MouseScrollDelta}, 
-    event_loop::{ActiveEventLoop, ControlFlow, EventLoop}, 
-    keyboard::NamedKey, window::{Window, WindowAttributes, WindowId}
+    event::{MouseScrollDelta, WindowEvent}, 
+    event_loop::ActiveEventLoop, 
+    keyboard::NamedKey, window::{self, Window, WindowAttributes, WindowId}
 };
+use wgpu::*;
+
+use engine_renderer::{Renderer};
+use engine_renderer::pipeline::create_render_pipeline;
 
 mod input; // Import the input module which defines the InputState struct and its associated methods
 pub use input::InputState; // Make InputState available for external use (main.rs file will use this to manage input state)
@@ -19,7 +24,9 @@ pub use input::InputState; // Make InputState available for external use (main.r
 // App State
 #[derive(Default)]
 pub struct AppState {
-    pub window: Option<Window>, 
+    pub window: Option<Arc<Window>>,
+    pub renderer: Option<Renderer>,
+    pub pipeline: Option<wgpu::RenderPipeline>,
     pub input_state: input::InputState,
     pub title: String,
     pub height: u32,
@@ -32,22 +39,20 @@ impl ApplicationHandler for AppState {
 
     fn resumed(&mut self, event_loop: &ActiveEventLoop) {
 
-        let window_attr = WindowAttributes::default()
-            .with_title(&self.title)
-            .with_inner_size(winit::dpi::LogicalSize::new(self.width, self.height))
-            .with_resizable(self.resizable);
+        let window_attr = Arc::new(event_loop.create_window(
+            WindowAttributes::default().with_title("Rust Engine")
+        ).unwrap());
 
-        match event_loop.create_window(window_attr) {
-            Ok(window) => {
-                // Open window successfully created, store it in the app state
-                self.window = Some(window);
-            }
-            Err(e) => {
-                // Failed to create window, log the error and exit the application
-                eprintln!("Failed to create window: {:?}", e);
-                event_loop.exit();
-            }
-        }
+        // Render assets
+        let renderer = pollster::block_on(Renderer::new(window_attr.clone()));
+        let pipeline = create_render_pipeline(
+            &renderer.device, 
+            renderer.surface_config.format, 
+        );
+
+        self.renderer = Some(renderer); 
+        self.pipeline = Some(pipeline); 
+        self.window = Some(window_attr);
     }
 
     fn window_event(
@@ -76,10 +81,17 @@ impl ApplicationHandler for AppState {
             // Handle redraw request event
             WindowEvent::RedrawRequested => {
                 // Handle redraw request, trigger rendering logic here
-                self.input_state.start_frame(); // Reset input state at the start of each frame
-                if let Some(window) = &self.window {
-                    window.request_redraw();
-                    println!("Redraw requested for window: {:?}", window_id);   
+                let renderer = self.renderer.as_ref().unwrap();
+                let pipeline = self.pipeline.as_ref().unwrap();
+
+                match renderer.render(pipeline) {
+                    Ok(_) => {} 
+
+                    Err(wgpu::SurfaceError::Lost) => {
+                        renderer.resize_window(renderer.win_size);
+                    }
+                    Err(wgpu::SurfaceError::OutOfMemory) => event_loop.exit(), 
+                    Err(e) => panic!("Render error {}", e),
                 }
             }
 
@@ -109,6 +121,7 @@ impl ApplicationHandler for AppState {
                 };
                 self.input_state.scroll_delta = scroll_delta;
             }
+
             // Ignore other events for now
             _ => {}
         }

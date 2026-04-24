@@ -8,6 +8,6 @@ name = "RustGameEngine"
 path = "main.rs"
 
 [dependencies]
-engine_window = { workspace = true }
+engine_window = { path = "../crates/engine_window" }
 winit = { workspace = true }
 env_logger = { workspace = true }

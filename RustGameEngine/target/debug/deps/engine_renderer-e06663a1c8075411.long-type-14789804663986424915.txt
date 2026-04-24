@@ -1,0 +1,1 @@
+impl Future<Output = std::result::Result<(wgpu::Device, wgpu::Queue), wgpu::RequestDeviceError>> + WasmNotSend

@@ -1,17 +1,101 @@
-   0.034231500s  INFO prepare_target{force=false package_id=RustGameEngine v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src) target="RustGameEngine"}: cargo::core::compiler::fingerprint: stale: changed "/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window/src/lib.rs"
-   0.034244042s  INFO prepare_target{force=false package_id=RustGameEngine v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src) target="RustGameEngine"}: cargo::core::compiler::fingerprint:           (vs) "/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/target/debug/.fingerprint/engine_window-16c397b92ff51b99/dep-lib-engine_window"
-   0.034246375s  INFO prepare_target{force=false package_id=RustGameEngine v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src) target="RustGameEngine"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 1775361883, nanos: 214821930 } < FileTime { seconds: 1775362047, nanos: 898344522 }
-   0.034803250s  INFO prepare_target{force=false package_id=RustGameEngine v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src) target="RustGameEngine"}: cargo::core::compiler::fingerprint: fingerprint dirty for RustGameEngine v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src)/Check { test: false }/TargetInner { name: "RustGameEngine", doc: true, ..: with_path("/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src/main.rs", Edition2024) }
-   0.034808625s  INFO prepare_target{force=false package_id=RustGameEngine v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src) target="RustGameEngine"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleDepFingerprint { name: "engine_window" })
-   0.035030500s  INFO prepare_target{force=false package_id=engine_window v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window) target="engine_window"}: cargo::core::compiler::fingerprint: fingerprint dirty for engine_window v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("engine_window", ["lib"], "/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window/src/lib.rs", Edition2024) }
-   0.035035750s  INFO prepare_target{force=false package_id=engine_window v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window) target="engine_window"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/target/debug/.fingerprint/engine_window-16c397b92ff51b99/dep-lib-engine_window", reference_mtime: FileTime { seconds: 1775361883, nanos: 214821930 }, stale: "/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window/src/lib.rs", stale_mtime: FileTime { seconds: 1775362047, nanos: 898344522 } }))
-   0.036497292s  INFO prepare_target{force=false package_id=RustGameEngine v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src) target="RustGameEngine"}: cargo::core::compiler::fingerprint: fingerprint dirty for RustGameEngine v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src)/Check { test: true }/TargetInner { name: "RustGameEngine", doc: true, ..: with_path("/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src/main.rs", Edition2024) }
-   0.036500875s  INFO prepare_target{force=false package_id=RustGameEngine v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src) target="RustGameEngine"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleDepFingerprint { name: "engine_window" })
-   0.037392917s  INFO prepare_target{force=false package_id=engine_window v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window) target="engine_window"}: cargo::core::compiler::fingerprint: stale: changed "/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window/src/lib.rs"
-   0.037397542s  INFO prepare_target{force=false package_id=engine_window v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window) target="engine_window"}: cargo::core::compiler::fingerprint:           (vs) "/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/target/debug/.fingerprint/engine_window-96fee0a338b2243f/dep-test-lib-engine_window"
-   0.037398792s  INFO prepare_target{force=false package_id=engine_window v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window) target="engine_window"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 1775361883, nanos: 214825181 } < FileTime { seconds: 1775362047, nanos: 898344522 }
-   0.037434459s  INFO prepare_target{force=false package_id=engine_window v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window) target="engine_window"}: cargo::core::compiler::fingerprint: fingerprint dirty for engine_window v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("engine_window", ["lib"], "/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window/src/lib.rs", Edition2024) }
-   0.037437334s  INFO prepare_target{force=false package_id=engine_window v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window) target="engine_window"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/target/debug/.fingerprint/engine_window-96fee0a338b2243f/dep-test-lib-engine_window", reference_mtime: FileTime { seconds: 1775361883, nanos: 214825181 }, stale: "/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window/src/lib.rs", stale_mtime: FileTime { seconds: 1775362047, nanos: 898344522 } }))
+   0.197019542s  INFO prepare_target{force=false package_id=RustGameEngine v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src) target="RustGameEngine"}: cargo::core::compiler::fingerprint: fingerprint error for RustGameEngine v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src)/Check { test: false }/TargetInner { name: "RustGameEngine", doc: true, ..: with_path("/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src/main.rs", Edition2024) }
+   0.197039917s  INFO prepare_target{force=false package_id=RustGameEngine v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src) target="RustGameEngine"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/target/debug/.fingerprint/RustGameEngine-2a1383bc286fef8f/bin-RustGameEngine`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.209261333s  INFO prepare_target{force=false package_id=engine_window v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window) target="engine_window"}: cargo::core::compiler::fingerprint: fingerprint error for engine_window v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("engine_window", ["lib"], "/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window/src/lib.rs", Edition2024) }
+   0.209409833s  INFO prepare_target{force=false package_id=engine_window v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window) target="engine_window"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/target/debug/.fingerprint/engine_window-3fb12e47b41ab0e3/lib-engine_window`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+  17: _main
+   0.221873458s  INFO prepare_target{force=false package_id=RustGameEngine v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src) target="RustGameEngine"}: cargo::core::compiler::fingerprint: fingerprint error for RustGameEngine v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src)/Check { test: true }/TargetInner { name: "RustGameEngine", doc: true, ..: with_path("/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src/main.rs", Edition2024) }
+   0.221878542s  INFO prepare_target{force=false package_id=RustGameEngine v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src) target="RustGameEngine"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/target/debug/.fingerprint/RustGameEngine-3c6c14bd7bc8f3a7/test-bin-RustGameEngine`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.224233958s  INFO prepare_target{force=false package_id=engine_window v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window) target="engine_window"}: cargo::core::compiler::fingerprint: fingerprint error for engine_window v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("engine_window", ["lib"], "/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window/src/lib.rs", Edition2024) }
+   0.224240000s  INFO prepare_target{force=false package_id=engine_window v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window) target="engine_window"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/target/debug/.fingerprint/engine_window-c4b1a4d4134efa6b/test-lib-engine_window`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
     Checking engine_window v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/crates/engine_window)
-    Checking RustGameEngine v0.1.0 (/Users/ervinc/GitHub/RustGameEngine/RustGameEngine/src)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.10s
+error: could not compile `engine_window` (lib test) due to 1 previous error; 7 warnings emitted
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `engine_window` (lib) due to 1 previous error; 7 warnings emitted
