@@ -20,7 +20,7 @@ var<private> COLORS: array<vec3<f32>, 3> = array<vec3<f32>, 3> (
 @vertex
 fn vs_main(@builtin(vertex_index) vi: u32) -> VertexOutput {
     var out: VertexOutput; 
-    out.clip_position = vec4<f32>(POSITIONS[vi], 0,0, 1.0);
+    out.clip_position = vec4<f32>(POSITIONS[vi], 0.0, 1.0);
     out.color = COLORS[vi];
     return out;
 }

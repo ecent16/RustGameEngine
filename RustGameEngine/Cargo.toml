@@ -21,4 +21,4 @@ winit = "0.30.13"
 winit-input-map = "0.6.1"
 wgpu = "0.19"
 pollster = "0.4"
-bytemuck = {version = "1", features = ["derive"]}
+bytemuck = {version = "1.9", features = ["derive"]}
