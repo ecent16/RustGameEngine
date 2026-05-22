@@ -4,3 +4,60 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+bevy = { version = "0.18.1", default-features = false, features = [
+    2d",
+    "3d",
+    "bevy_asset",
+    "bevy_state",
+    "bevy_winit",
+    "bevy_render",
+    "bevy_pbr",
+    "bevy_sprite",
+    "bevy_text",
+    "bevy_ui",
+    "png",
+    "jpeg",
+    "ktx2",
+    "zstd",
+    "x11",    
+    "wayland", 
+    "android_shared_stdcxx", 
+    "multi_threaded", 
+    "serialize",
+]}
+
+bevy_sprite3d = "3.0"
+bevy_ecs_tilemap = "0.15.0"
+bevy_spritesheet_animation = "0.8.0"
+bevy_hanabi = { version = "0.18", default-features = false, features = ["3d"] }
+bevy_kira_audio = { version = "0.22", default-features = false } # Disable default Bevy Audio
+bevy_egui = "0.35"
+bevy_asset_loader = "0.22"
+bevy_rapier2d = { version = "0.33.0", features = ["simd-stable", "debug-render-2d"] }
+
+# Input Management
+leafwing-input-manager = "0.16"
+
+# Serialization (Save Data and Configs)
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Feature Flags
+[features]
+default = []
+
+physics-debug = ["bevy_rapier2d/debug-render-2d"]
+vfx-serde = ["bevy_hanabi/serde"]
+
+# Optimization Profiles
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = true 
